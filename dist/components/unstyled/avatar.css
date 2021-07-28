@@ -1,0 +1,1 @@
+.avatar{position:relative;display:inline-flex;align-items:center;justify-content:center}:where(.avatar) img{height:100%;width:100%;-o-object-fit:cover;object-fit:cover;border-radius:inherit}

@@ -1,0 +1,1 @@
+.steps{counter-reset:step;grid-auto-columns:1fr;display:inline-grid;grid-auto-flow:column;overflow:hidden;overflow-x:auto}.steps .step{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));place-items:center;text-align:center}

@@ -1,0 +1,1 @@
+.divider{display:flex;flex-grow:1;align-items:center}.divider:after,.divider:before{content:"";width:100%}.divider--vertical{flex-grow:0;flex-direction:column;align-self:stretch}.divider--vertical:after,.divider--vertical:before{height:100%}
