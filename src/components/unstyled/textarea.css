@@ -1,0 +1,11 @@
+
+.textarea{
+  @apply flex-shrink transition duration-200 ease-in-out;
+  min-height: 2.5rem;
+  &{
+    @apply px-2 py-2 text-sm leading-loose;
+  }
+  &:focus,&:focus-within {
+    @apply outline-none;
+  }
+}

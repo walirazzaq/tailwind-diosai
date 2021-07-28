@@ -1,0 +1,18 @@
+.menu {
+    @apply flex flex-col overflow-hidden;
+    &--horizontal {
+        @apply inline-flex flex-row;
+        .menu__item,.menu__title {
+            @apply flex-row items-center;
+        }
+    }
+    &__item {
+        @apply flex items-stretch transition duration-200 ease-in-out cursor-pointer;
+        &:focus {
+            @apply outline-none;
+        }
+    },
+    &__title{
+        @apply flex items-stretch;
+    }
+}

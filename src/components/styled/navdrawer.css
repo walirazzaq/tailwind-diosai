@@ -1,0 +1,12 @@
+.navdrawer {
+    @apply w-64;
+    &__overlay {
+        --tw-bg-opacity: 0.2;
+        --tw-text-opacity: 1;
+        --cc-bg: var(--n);
+        --cc-c: var(--nc);
+        color: hsla(var(--cc-c) / var(--tw-text-opacity));
+        background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity));
+        z-index:4;
+    }
+}

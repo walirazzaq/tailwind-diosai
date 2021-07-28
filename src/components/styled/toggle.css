@@ -1,0 +1,92 @@
+/* .toggle {
+    --tw-bg-opacity: 1;
+    --cc-bg: var(--n);
+    --toggle-bg: hsla(var(--b1) / var(--tw-bg-opacity));
+    --toggle-fg: hsla(var(--b3) / var(--tw-bg-opacity));
+    position: relative;
+    appearance: none;
+    background-color: var(--toggle-bg);
+    border-width: 0.125rem;
+    border-style: solid;
+    border-color: var(--toggle-fg);
+    inline-size: calc(var(--toggle-size, 1.6rem) * 2);
+    block-size: calc(var(--toggle-size, 1.6rem) * 1);
+    border-radius: var(--toggle-rounded, 100rem);
+    transition-property: all;
+    transition-timing-function: ease-out;
+    transition-duration: 200ms;
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        @apply outline-none;
+    }
+    &:focus-visible {
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px var(--toggle-fg);
+        outline: none;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        inset-block: 0.05rem;
+        inset-inline-start: 0.05rem;
+        inline-size: calc(var(--toggle-size, 1.6rem) - (0.05rem * 5));
+        background-color: var(--toggle-fg);
+        border-radius: calc(var(--toggle-rounded, 100rem) - (0.05rem / 2));
+        transition-property: all;
+        transition-timing-function: ease-out;
+        transition-duration: 200ms;
+    }
+    &:checked {
+        --toggle-bg: hsla(var(--cc-bg) / 0.1);
+        --toggle-fg: hsla(var(--cc-bg) / var(--tw-bg-opacity));
+        ;
+        &::before {
+            inset-inline-start: calc( var(--toggle-size, 1.6rem) + (0.05rem / 2) - 0.125rem);
+        }
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+} */
+
+/* NEW */
+
+.toggle {
+    --size: 2.5rem;
+    --toggle-h: calc(var(--size)/2);
+    --handleoffset: calc(var(--size) - var(--toggle-h));
+    --cc-bg: var(--bc);
+    --cc-c: var(--b1);
+    --chkbg: hsla(var(--bc)/.2);
+    --focus-shadow: 0 0 0;
+    border-radius:var(--rounded-toggle,99999999px);
+    height: var(--toggle-h);
+    width: var(--size);
+    border: 0.15em solid hsla(var(--bc) / var(--tw-border-opacity, 0.3));
+    background-color: hsla(var(--bc) / var(--tw-bg-opacity, 0.3));
+    @apply duration-300 ease-in-out appearance-none cursor-pointer;
+    transition: background, box-shadow var(--animation-input, .2s) ease-in-out;
+    box-shadow: calc( -1 * var(--handleoffset)) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    &:focus-visible {
+        --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
+        outline:none;
+    }
+    &:checked {
+        &:focus-visible{
+            --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--cc-bg));
+        }
+        border: 0.15em solid hsla(var(--cc-bg) / var(--tw-border-opacity, 1));
+        background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity, 1));
+        @apply bg-opacity-100 border-opacity-100;
+        box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    }
+    &:disabled {
+        background-color: hsla(var(--bc) / var(--tw-bg-opacity, 0.2));
+        @apply border-transparent cursor-not-allowed bg-opacity-20;
+    }
+}

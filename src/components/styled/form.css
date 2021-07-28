@@ -1,0 +1,13 @@
+.label {
+  padding: 0.15rem;
+  &-text {
+    @apply text-sm font-medium select-none;
+    --tw-bg-opacity:1;
+    color:hsla(var(--cc-c) / var(--tw-text-opacity));
+  }
+  &-text-alt {
+    @apply text-xs;
+    --tw-bg-opacity:1;
+    color:hsla(var(--cc-c) / var(--tw-text-opacity));
+  }
+}

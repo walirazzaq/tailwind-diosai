@@ -1,0 +1,33 @@
+.dropdown{
+  @apply relative inline-block;
+}
+.dropdown>*:focus{
+  @apply outline-none;
+}
+.dropdown .dropdown__content{
+  @apply absolute z-50 invisible opacity-0;
+}
+.dropdown--end .dropdown__content{
+  @apply right-0;
+}
+.dropdown--left .dropdown__content{
+  @apply top-0 bottom-auto right-full;
+}
+.dropdown--right .dropdown__content{
+  @apply top-0 bottom-auto left-full;
+}
+.dropdown--top .dropdown__content{
+  @apply top-auto bottom-full;
+}
+.dropdown--end.dropdown--right .dropdown__content{
+  @apply bottom-0 top-auto;
+}
+.dropdown--end.dropdown--left .dropdown__content{
+  @apply bottom-0 top-auto;
+}
+.dropdown.dropdown--open .dropdown__content,
+.dropdown.dropdown--hover:hover .dropdown__content,
+.dropdown:not(.dropdown--hover):focus .dropdown__content,
+.dropdown:not(.dropdown--hover):focus-within .dropdown__content{
+  @apply visible opacity-100;
+}

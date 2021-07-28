@@ -1,0 +1,75 @@
+.collapse {
+    @apply outline-none;
+    --cc-bg: var(--b2);
+    --cc-c: var(--bc);
+}
+
+.collapse__title {
+    min-height: 3.75rem;
+}
+
+.collapse--arrow .collapse__title:after {
+    @apply absolute block transition-all duration-300 ease-in-out;
+    height: 0.5em;
+    width: 0.5em;
+    top: 1.4rem;
+    right: 1.4rem;
+    content: '';
+    transform-origin: 75% 75%;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px;
+}
+
+.collapse--plus .collapse__title:after {
+    @apply absolute block transition-all duration-300 ease-in-out;
+    height: 0.5em;
+    width: 0.5em;
+    top: .9rem;
+    right: 1.4rem;
+    content: '+';
+}
+
+.collapse:not(.collapse--open):not(.collapse--close) input[type=checkbox], .collapse:not(.collapse--open):not(.collapse--close) .collapse__title {
+    @apply cursor-pointer;
+}
+
+.collapse:focus:not(.collapse--open):not(.collapse--close) .collapse__title {
+    cursor: unset;
+}
+
+.collapse__title, .collapse>input[type=checkbox] {
+    @apply p-4;
+    transition: background-color .2s ease-in-out;
+}
+
+.collapse:not(.collapse--close) input[type=checkbox]:focus~.collapse__title {
+    background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity, 1));
+    color: hsla(var(--cc-c) / var(--tw-text-opacity, 1));
+}
+
+.collapse--open .collapse__title, .collapse:focus:not(.collapse--close) .collapse__title, .collapse:not(.collapse--close) input[type=checkbox]:checked~.collapse__title {
+    @apply outline-none;
+    background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity, 1));
+    color: hsla(var(--cc-c) / var(--tw-text-opacity, 1));
+}
+
+.collapse__content {
+    @apply px-4;
+    cursor: unset;
+    transition: padding .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.collapse--open .collapse__content, .collapse:focus:not(.collapse--close) .collapse__content, .collapse:not(.collapse--close) input[type=checkbox]:checked~.collapse__content {
+    @apply pb-4 opacity-100;
+    background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity, 1));
+    color: hsla(var(--cc-c) / var(--tw-text-opacity, 1));
+    transition: padding .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.collapse--open.collapse--arrow .collapse__title:after, .collapse--arrow:focus:not(.collapse--close) .collapse__title:after, .collapse--arrow:not(.collapse--close) input[type=checkbox]:checked~.collapse__title:after {
+    transform: rotate(225deg);
+}
+
+.collapse--open.collapse--plus .collapse__title:after, .collapse--plus:focus:not(.collapse--close) .collapse__title:after, .collapse--plus:not(.collapse--close) input[type=checkbox]:checked~.collapse__title:after {
+    content: '−';
+}

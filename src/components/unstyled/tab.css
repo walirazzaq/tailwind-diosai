@@ -1,0 +1,8 @@
+.tabs {
+  @apply flex flex-wrap items-end;
+}
+.tab{
+  @apply relative inline-flex flex-wrap items-center justify-center text-center cursor-pointer select-none;
+  @apply h-8 text-sm leading-loose;
+  --tab-padding: 1rem;
+}

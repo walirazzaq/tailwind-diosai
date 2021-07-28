@@ -1,0 +1,34 @@
+.divider{
+    --cc-bg:var(--bc);
+    --tw-text-opacity:1;
+    --tw-border-opacity:0.2;
+    color:hsla(var(--cc-bg) / var(--tw-text-opacity));
+  @apply h-4 my-4;
+  &:before, &:after{
+    @apply h-0.5;
+    --tw-bg-opacity: var(--tw-border-opacity);
+    background-color:hsla(var(--cc-bg) / var(--tw-bg-opacity))
+  }
+  &:not(:empty){
+    &:before{
+      @apply mr-2;
+    }
+    &:after{
+      @apply ml-2;
+    }
+  }
+  &--vertical{
+    @apply w-4 h-auto mx-4 my-0;
+    &:before, &:after{
+      @apply w-0.5;
+    }
+    &:not(:empty){
+      &:before{
+        @apply mb-2 mr-0;
+      }
+      &:after{
+        @apply mt-2 ml-0;
+      }
+    }
+  }
+}

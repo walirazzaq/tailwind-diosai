@@ -1,0 +1,18 @@
+.icon {
+    --size:1.35em;
+    fill: currentColor;
+    color: currentColor;
+    stroke: currentColor;
+    align-tems: center;
+    justify-content: center;
+    vertical-align: middle;
+    display: inline-flex;
+    font-size: inherit;
+    width: var(--size, 1.5em);
+    height: var(--size, 1.5em);
+    aspect-ratio: 1;
+    & svg{
+        height: auto !important;
+        width: auto !important;
+    }
+}

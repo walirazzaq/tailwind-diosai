@@ -1,0 +1,107 @@
+.btn {
+    @apply font-semibold;
+    border-width: var(--border-btn, 1px);
+    animation: button-pop var(--animation-btn, 0.25s) ease-out;
+    text-transform: var(--btn-text-case, uppercase);
+    &:active:hover, &:active:focus {
+        animation: none;
+    }
+    &:active:hover, &:active:focus {
+        transform: scale( var(--btn-focus-scale, 0.95));
+    }
+    /* default btn */
+    & {
+        --tw-bg-opacity: 1;
+        --tw-text-opacity: 1;
+        --tw-border-opacity: 1;
+        --cc-bg: var(--bc);
+        --cc-c: var(--b1);
+        --cc-bg-f: var(--bc);
+        border-color: hsla(var(--cc-bg) / var(--tw-border-opacity));
+        @apply colorize;
+        &:hover, &--active {
+            border-color: hsla(var(--cc-bg-f) / var(--tw-border-opacity));
+            background-color: hsla(var(--cc-bg-f) / var(--tw-bg-opacity));
+        }
+        &:focus-visible {
+            box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--cc-bg-f));
+        }
+    }
+    /* glass */
+    &.glass {
+        &:hover, &.btn--active {
+            --glass-opacity: 25%;
+            --glass-border-opacity: 15%;
+        }
+        &:focus-visible {
+            box-shadow: 0 0 0 2px currentColor;
+        }
+    }
+    /* btn variants */
+    &--ghost {
+        --tw-bg-opacity: 0;
+        --tw-border-opacity: 0;
+        color: hsla(var(--cc-bg) / var(--tw-text-opacity));
+        &:hover, &.btn--active {
+            --tw-bg-opacity: 0.1;
+        }
+        &:focus-visible {
+            box-shadow: 0 0 0 2px hsl(var(--cc-bg));
+        }
+    }
+    &--link {
+        color: hsla(var(--cc-bg) / var(--tw-text-opacity));
+        @apply bg-transparent border-transparent;
+        &:hover, &.btn--active {
+            @apply underline bg-transparent border-transparent;
+        }
+        &:focus-visible {
+            box-shadow: 0 0 0 2px currentColor;
+        }
+    }
+    /* outline */
+    &--outline {
+        @apply bg-transparent;
+        color: hsla(var(--cc-bg) / var(--tw-text-opacity));
+        border-color: hsla(var(--cc-bg) / var(--tw-border-opacity));
+        border-width: 0.15rem;
+        &:hover {
+            color: hsla(var(--cc-c) / var(--tw-text-opacity));
+        }
+    }
+    /* disabled */
+    &--disabled, &[disabled] {
+        @apply border-opacity-0 bg-neutral bg-opacity-20 text-opacity-20;
+        color: hsla(var(--nc) / var(--tw-text-opacity));
+    }
+}
+
+/* group */
+
+.btn-group {
+    &>input[type="radio"]:checked.btn, &>.btn--active {
+        border-color: hsla(var(--cc-bg-f) / var(--tw-border-opacity));
+        background-color: hsla(var(--cc-bg-f) / var(--tw-bg-opacity));
+        &:focus-visible {
+            box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--cc-bg-f));
+        }
+    }
+    &>.btn:not(:first-child) {
+        @apply -ml-px rounded-l-none;
+    }
+    &>.btn:not(:last-child) {
+        @apply rounded-r-none;
+    }
+}
+
+@keyframes button-pop {
+    0% {
+        transform: scale( var(--btn-focus-scale, 0.95));
+    }
+    40% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

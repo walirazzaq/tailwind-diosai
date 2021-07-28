@@ -1,0 +1,12 @@
+.chip {
+    @apply relative inline-flex items-center overflow-hidden;
+    &__prepend, &__append {
+        @apply inline-flex items-center;
+    }
+    &__prepend {
+        padding-right: 0.5em;
+    }
+    &__append {
+        padding-left: 0.5em;
+    }
+}

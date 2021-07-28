@@ -1,0 +1,65 @@
+.menu {
+    --cc-bg: var(--bc);
+    --cc-bg-f: var(--bc);
+    --cc-c: var(--b1);
+    :where(&&--horizontal&--bordered) :where(&__item&__item--active),
+    :where(&&--horizontal) &__item--bordered {
+        @apply border-b-4 border-l-0;
+        color: hsla(var(--cc-bg)/var(--tw-text-opacity,1));
+        border-color: hsla(var(--cc-bg)/var(--tw-border-opacity,1));
+    }
+    &[class*="p-"] .menu__item {
+        @apply rounded-btn;
+    }
+    &__item {
+        @apply px-5 py-3;
+        /* Using computed bg color as text idol state don't have any bg and content color matches inherited bg */
+        /* color: hsla(var(--bc) / var(--tw-text-opacity, 1)); */
+        &:focus, &:hover {
+            background-color: hsla(var(--cc-bg-f) / var(--tw-bg-opacity, 1));
+            color: hsla(var(--cc-c) / var(--tw-text-opacity, 1));
+        }
+        :where(.menu:not(.menu--bordered)) &--active:not(&--bordered) {
+            @apply colorize;
+        }
+        :where(menu.menu--bordered) &--active{
+            color:hsla(var(--cc-bg) / var(--tw-text-opacity,1));
+            border-color:hsla(var(--cc-bg) / var(--tw-border-opacity,1));
+        }
+        &:active {
+            background-color: hsla(var(--cc-bg-f) / var(--tw-bg-opacity, 1));
+        }
+        &--disabled, &[disabled] {
+            @apply bg-transparent cursor-not-allowed text-opacity-20 border-opacity-20;
+            color: hsla(var(--bc) / var(--tw-text-opacity));
+            &:hover{
+                background-color: transparent;
+            }
+        }
+        :where(.menu--bordered:not(.menu--horizontal)) :where(&&--active), &--bordered {
+            @apply bg-transparent border-l-4;
+            --tw-border-opacity: 1;
+            border-color: hsla(var(--cc-bg) / var(--tw-border-opacity));
+            color:hsla(var(--cc-bg) / var(--tw-text-opacity,1));
+        }
+        :where(.menu--hover-bordered:not(.menu--horizontal)) &__item, &--hover-bordered {
+            @apply border-l-4 border-transparent;
+            &:hover {
+                --tw-border-opacity: 1;
+                border-color: hsla(var(--cc-bg) / var(--tw-border-opacity))
+            }
+        }
+    }
+    .menu {
+        @apply pl-6;
+    }
+    &--compact {
+        .menu__item {
+            @apply py-2 text-sm;
+        }
+    }
+    &__title {
+        @apply px-5 py-1 text-xs font-bold text-opacity-40;
+        color: hsla(var(--bc) / var(--tw-text-opacity));
+    }
+}

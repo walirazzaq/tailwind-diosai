@@ -1,0 +1,7 @@
+.avatar{
+  @apply relative inline-flex items-center justify-center;
+  :where(&) img{
+    @apply object-cover w-full h-full;
+    border-radius:inherit;
+  }
+}

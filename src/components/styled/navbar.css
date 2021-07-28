@@ -1,0 +1,6 @@
+.navbar {
+    --cc-bg: var(--b2);
+    --cc-c: var(--bc);
+    padding: var(--navbar-padding, .5rem);
+    @apply transition-all duration-200 colorize;
+}

@@ -1,0 +1,21 @@
+.collapse {
+  @apply relative grid overflow-hidden;
+}
+.collapse__title,
+.collapse>input[type=checkbox],
+.collapse__content{
+  @apply col-start-1 row-start-1;
+}
+.collapse>input[type=checkbox]{
+  @apply opacity-0 appearance-none;
+}
+.collapse__content{
+  @apply row-start-2 overflow-hidden;
+  max-height: 0px;
+}
+.collapse--open .collapse__content,
+.collapse:focus:not(.collapse--close) .collapse__content,
+.collapse:not(.collapse--close) input[type=checkbox]:checked ~ .collapse__content
+{
+  max-height: 9000px;
+}

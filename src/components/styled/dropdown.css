@@ -1,0 +1,18 @@
+.dropdown .dropdown__content{
+  @apply transition duration-200 ease-in-out transform scale-95 origin-top;
+}
+.dropdown--top .dropdown__content{
+  @apply origin-bottom;
+}
+.dropdown--left .dropdown__content{
+  @apply origin-right;
+}
+.dropdown--right .dropdown__content{
+  @apply origin-left;
+}
+.dropdown.dropdown--open .dropdown__content,
+.dropdown.dropdown--hover:hover .dropdown__content,
+.dropdown:focus .dropdown__content,
+.dropdown:focus-within .dropdown__content{
+  @apply scale-100;
+}

@@ -1,0 +1,16 @@
+.avatar-group{
+  @apply flex items-center;
+  :where(&) .avatar{
+    @apply border-4 rounded-full border-base-100;
+  }
+}
+.avatar{
+    --tw-bg-opacity:1;
+    --tw-text-opacity:1;
+    --cc-bg:var(--b3);
+    --cc-c:var(--bc);
+  @apply colorize;
+  border-radius: var(--rounded-avatar,9999999px);
+  width:var(--avatar-size,2.5rem);
+  aspect-ratio:1;
+}

@@ -1,0 +1,44 @@
+.navs-container{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    isolation: isolate;
+    /* overflow: hidden; */
+    @apply transition-all duration-200;
+}
+.navbar {
+    @apply top-0 flex items-center;
+    &>* {
+        @apply flex items-center;
+    }
+    &--absolute {
+        @apply absolute;
+    }
+    &--fixed {
+        @apply fixed;
+    }
+    &--absolute,&--fixed{
+        z-index: 1;
+        @apply top-0 left-0 right-0;
+    }
+    /* &--shift-left {
+        @apply left-0;
+    }
+    &--shift-right {
+        @apply right-0;
+    } */
+    &__start {
+        width: 50%;
+        justify-content: flex-start;
+    }
+    &__center {
+        flex-shrink: 0;
+    }
+    &__end {
+        width: 50%;
+        justify-content: flex-end;
+    }
+}

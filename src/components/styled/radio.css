@@ -1,0 +1,85 @@
+/* .radio {
+    --size: 1.5rem;
+    @apply relative appearance-none;
+    width: var(--size);
+    height: var(--size);
+    --cc-bg: var(--n);
+    --cc-c: var(--nc);
+    &:before {
+        inset: 0;
+        content: "";
+        position: absolute;
+        border: calc(var(--size)/12) solid hsla(var(--cc-bg)/1);
+        border-radius: var(--rounded-radio, 100%);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        transition-duration: .2s;
+    }
+    &:checked {
+        &:before {
+            box-shadow: inset 0 0 0 calc(var(--size) / 10) hsl(var(--b1)), inset 0 0 0 var(--size) hsl(var(--cc-bg));
+        }
+    }
+    &:focus-visible {
+        outline: none;
+        &:before {
+            box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--cc-bg));
+        }
+    }
+    &:checked:focus-visible, &:checked:hover:focus-visible {
+        outline: none;
+        &:before {
+            box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--cc-bg)),inset 0 0 0 calc(var(--size) / 10) hsl(var(--b1)), inset 0 0 0 var(--size) hsl(var(--cc-bg));
+        }
+    }
+    &:disabled, &:disabled:hover {
+        &:before {
+            --tw-border-opacity: 0.2;
+            cursor: not-allowed;
+            border-color: hsla(var(--bc) / var(--tw-border-opacity));
+        }
+        &:checked {
+            &:before {
+                box-shadow: inset 0 0 0 calc(var(--size) / 10) hsl(var(--b1)), inset 0 0 0 var(--size) hsl(var(--b3));
+            }
+        }
+    }
+} */
+/* New */
+.radio{
+    --size:1.25rem;
+    --cc-bg: var(--bc);
+    --cc-c: var(--b1);
+    --focus-shadow: 0 0 0;
+    height: var(--size);
+    width: var(--size);
+    border: 0.15em solid hsla(var(--cc-bg) / var(--tw-border-opacity));
+    @apply border-opacity-50 rounded-full appearance-none cursor-pointer;
+    transition: background,box-shadow var(--animation-input, .2s) ease-in-out;
+    &:focus-visible {
+      --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--cc-bg));
+      outline:none;
+      box-shadow:var(--focus-shadow);
+    }
+    &:checked{
+      background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity,1));
+      color: hsla(var(--cc-c) / var(--tw-text-opacity,1));
+      animation: radiomark var(--animation-input, .2s)  ease-in-out;
+      box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset, var(--focus-shadow);
+    }
+    &:disabled{
+      @apply cursor-not-allowed opacity-30;
+    }
+  }
+
+  @keyframes radiomark {
+    0% {
+      box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset, var(--focus-shadow);
+    }
+    50% {
+      box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset, var(--focus-shadow);
+    }
+    100% {
+      box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset, var(--focus-shadow);
+    }
+  }

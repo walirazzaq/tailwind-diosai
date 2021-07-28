@@ -1,0 +1,11 @@
+.badge {
+  &-ghost {
+    background-color: hsla(var(--b2) / var(--tw-bg-opacity));
+    color: hsla(var(--bc) / var(--tw-text-opacity));
+    border-color: hsla(var(--b2) / var(--tw-border-opacity));
+  }
+
+  &-outline {
+    @apply bg-transparent border-opacity-50;
+  }
+}

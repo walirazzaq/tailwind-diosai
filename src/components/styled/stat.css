@@ -1,0 +1,33 @@
+.stats{
+  @apply rounded-box;
+}
+.stat{
+  @apply px-6 py-4;
+  --tw-text-opacity:1;
+  --tw-bg-opacity:1;
+  --cc-bg:var(--b1);
+  --cc-c:var(--bc);
+  color: hsla(var(--cc-c) / var(--tw-text-opacity));
+  background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity));
+  &__title{
+    @apply opacity-75;
+  }
+  &__value{
+    @apply text-4xl font-extrabold;
+  }
+  &__description{
+    @apply text-sm opacity-75;
+  }
+  &__actions{
+    @apply mt-4;
+  }
+}
+.stat+.stat{
+  @apply border-l border-opacity-10;
+  border-color: hsla(var(--cc-c) / var(--tw-border-opacity));
+}
+.stats.grid-flow-row{
+  .stat+.stat{
+    @apply border-t border-l-0;
+  }
+}

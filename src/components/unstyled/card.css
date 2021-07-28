@@ -1,0 +1,46 @@
+.card {
+    @apply relative flex flex-col overflow-hidden;
+    &:focus {
+        @apply outline-none;
+    }
+    &__content {
+        @apply flex flex-col h-full;
+    }
+    &__body {
+        @apply flex flex-col overflow-x-hidden overflow-y-auto;
+    }
+    & figure, & figure>* {
+        @apply w-full;
+    }
+    &__footer {
+        @apply flex flex-wrap items-start -mx-1;
+        &>* {
+            @apply m-1
+        }
+    }
+    &.card--image-full {
+        @apply grid;
+        &:before {
+            @apply relative;
+            content: "";
+        }
+        &:before, &>* {
+            @apply col-start-1 row-start-1;
+        }
+        &>figure img {
+            @apply object-cover h-full;
+        }
+    }
+    &.card--image-full > &__content {
+        @apply relative justify-end;
+    }
+    /* &.card--image-full {
+        @apply relative;
+        &>figure img {
+            @apply absolute object-cover h-full;
+        }
+    }
+    &.card--image-full > &__body {
+        @apply justify-end;
+    } */
+}

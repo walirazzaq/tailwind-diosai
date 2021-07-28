@@ -1,0 +1,33 @@
+.textarea {
+    --rounded-input: var(--rounded-btn);
+    --input-b-c:var(--cc-bg,var(--bc));
+    border-color: hsla(var(--input-b-c) / var(--tw-border-opacity));
+    border-radius: var(--rounded-input);
+    @apply border border-opacity-100 bg-base-100;
+    &--borderless {
+        @apply border-opacity-0;
+    }
+    &:not(:disabled):not([disabled]):not(&--disabled):not(&--ghost) {
+        &:hover {
+            box-shadow: inset 0 0 0 0.5px hsl(var(--input-b-c));
+        }
+        &:focus, &:focus-within {
+            box-shadow: inset 0 0 0 1px hsl(var(--input-b-c));
+        }
+    }
+    &--ghost {
+        @apply border-opacity-0 bg-opacity-5;
+        &:focus,&:focus-within {
+            @apply bg-opacity-100;
+            color:hsla(var(--bc)/var(--tw-text-opacity));
+            box-shadow: none;
+        }
+    }
+    &--disabled, &[disabled] {
+        @apply cursor-not-allowed bg-base-200 border-base-200 text-opacity-20 placeholder-opacity-20;
+        &:placeholder{
+            --tw-placeholder-opacity:0.2;
+            color:hsla(var(--bc) / var(--tw-placeholder-opacity));
+        }
+    }
+}

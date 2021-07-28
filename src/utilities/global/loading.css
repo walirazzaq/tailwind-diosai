@@ -1,0 +1,42 @@
+.is-loading{
+    &,
+    &:hover {
+        pointer-events: none;
+    }
+    pointer-events: none;
+    user-select: none;
+    --tw-text-opacity: 0.5;
+    --loading-right: calc(50% - (var(--loading-height, 1.5em) / 2));
+    --loading-bottom: calc(50% - (var(--loading-height, 1.5em) / 2));
+    isolation:isolate;
+    position: relative !important;
+    overflow:hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        background-color: rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(1.25px);
+        border-radius: inherit;
+        z-index: 1;
+    }
+    &:after {
+        z-index: 1;
+        border-width: 0.15em;
+        animation: spin var(--loading-speed, 700ms) infinite linear;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: currentColor;
+        border-right-color: currentColor;
+        content: '';
+        height: var(--loading-height, 1.5em);
+        width: var(--loading-height, 1.5em);
+        right: var(--loading-right);
+        bottom: var(--loading-bottom);
+        overflow: visible;
+        position: absolute;
+        border-radius: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

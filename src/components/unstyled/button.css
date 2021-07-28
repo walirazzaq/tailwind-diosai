@@ -1,0 +1,44 @@
+.btn {
+    @apply inline-flex flex-wrap items-center justify-center flex-shrink-0 text-center transition duration-200 ease-in-out border-transparent cursor-pointer select-none rounded-btn;
+    @apply text-base;
+    padding: .35em 0.75em;
+    &__prepend, &__append {
+        @apply inline-flex items-center;
+    }
+    &__prepend {
+        padding-right: 0.5em;
+    }
+    &__append {
+        padding-left: 0.5em;
+    }
+    &:focus {
+        @apply outline-none;
+    }
+    /* disabled */
+    &--disabled, &[disabled] {
+        @apply pointer-events-none;
+    }
+    &--icon {
+        padding: 0.35em;
+    }
+    /* shapes */
+    &--square {
+        aspect-ratio: 1;
+    }
+    &--circle {
+        aspect-ratio: 1;
+        @apply rounded-full;
+    }
+}
+
+/* group */
+
+.btn-group {
+    @apply flex flex-wrap;
+    &>input[type="radio"].btn {
+        @apply appearance-none;
+    }
+    &>input[type="radio"].btn:before {
+        content: attr(data-title);
+    }
+}

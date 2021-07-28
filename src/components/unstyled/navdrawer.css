@@ -1,0 +1,23 @@
+.navdrawer{
+    @apply top-0 bottom-0 left-0 flex flex-col max-w-full overflow-hidden transition duration-200 colorize;
+    &--absolute{
+        @apply absolute;
+    }
+    &--fixed{
+        @apply fixed;
+    }
+    &--right{
+        left: auto;
+        right: 0;
+        &::after{
+            left:0;
+            right:initial;
+        }
+    }
+    &--temporary{
+        z-index: 5;
+    }
+    &__content{
+        @apply h-full overflow-x-hidden overflow-y-auto;
+    }
+}
