@@ -1,6 +1,7 @@
 .btn {
     @apply inline-flex flex-wrap items-center justify-center flex-shrink-0 text-center transition duration-200 ease-in-out border-transparent cursor-pointer select-none rounded-btn;
-    @apply text-base;
+    font-size: 1rem;
+    line-height: 1.25em;
     padding: .35em 0.75em;
     &__prepend, &__append {
         @apply inline-flex items-center;

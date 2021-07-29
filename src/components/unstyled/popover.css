@@ -1,6 +1,7 @@
 .popover{
     @apply fixed flex flex-col overflow-hidden;
     z-index:5;
+    min-width: fit-content;
     &__content{
         @apply h-full overflow-x-hidden bg-scroll overscroll-y-auto;
     }

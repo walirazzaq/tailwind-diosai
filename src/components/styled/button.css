@@ -1,6 +1,6 @@
 .btn {
     @apply font-semibold;
-    border-width: var(--border-btn, 1px);
+    border-width: var(--border-btn, 0.15em);
     animation: button-pop var(--animation-btn, 0.25s) ease-out;
     text-transform: var(--btn-text-case, uppercase);
     &:active:hover, &:active:focus {
@@ -64,7 +64,7 @@
         @apply bg-transparent;
         color: hsla(var(--cc-bg) / var(--tw-text-opacity));
         border-color: hsla(var(--cc-bg) / var(--tw-border-opacity));
-        border-width: 0.15rem;
+        border-width: 0.15em;
         &:hover {
             color: hsla(var(--cc-c) / var(--tw-text-opacity));
         }
