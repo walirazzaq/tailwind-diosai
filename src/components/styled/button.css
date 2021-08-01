@@ -3,6 +3,7 @@
     border-width: var(--border-btn, 0.15em);
     animation: button-pop var(--animation-btn, 0.25s) ease-out;
     text-transform: var(--btn-text-case, uppercase);
+    letter-spacing: 0.1em;
     &:active:hover, &:active:focus {
         animation: none;
     }

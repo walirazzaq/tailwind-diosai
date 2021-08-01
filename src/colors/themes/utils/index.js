@@ -5,7 +5,7 @@ const flattenColors = function (ob) {
         if (!ob.hasOwnProperty(i)) {
             continue;
         }
-        if ((typeof ob[i]) === 'object') {
+        if ((typeof ob[i]) === 'object' && (Object.keys(ob[i]).includes('default') || Object.keys(ob[i]).includes('DEFAULT'))) {
             flatObject = flattenColors(ob[i]);
             for (var x in flatObject) {
                 if (!flatObject.hasOwnProperty(x)) {

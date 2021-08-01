@@ -1,0 +1,37 @@
+.overlay{
+    @apply fixed inset-0 z-20 flex items-baseline justify-center p-8;
+    &--fullscreen{
+        position: fixed !important;
+        padding:0;
+    }
+    &--start{
+        @apply justify-start;
+    }
+    &--center{
+        @apply justify-center;
+    }
+    &--end{
+        @apply justify-end;
+    }
+    &--top{
+        @apply items-start;
+    }
+    &--middle{
+        @apply items-center;
+    }
+    &--bottom{
+        @apply items-end;
+    }
+    &__content{
+        @apply flex w-full max-w-lg max-h-full overflow-x-hidden overflow-y-auto;
+    }
+}
+:where(.overlay.overlay--fullscreen) .overlay__content{
+    position: fixed;
+    inset: 0;
+    border-radius: 0;
+    max-width: 100%;
+}
+:where(.overlay.overlay--fullscreen) :where(.overlay__content) > :where(:first-child){
+    width: 100%;
+}

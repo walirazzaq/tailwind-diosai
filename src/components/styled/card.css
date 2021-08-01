@@ -7,7 +7,7 @@
     --cc-c: var(--bc);
     color: hsla(var(--cc-c) / var(--tw-text-opacity));
     background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity));
-    @apply rounded-box colorize;
+    @apply rounded-box;
     &:focus-visible {
         box-shadow: 0 0 0 2px currentColor;
     }
@@ -25,10 +25,10 @@
         }
     }
     &__body, &__header, &__footer {
-        padding: calc(var(--padding-card, 2rem) / 2) var(--padding-card, 2rem);
+        padding: calc(var(--padding-card, 2rem) / 3) var(--padding-card, 2rem);
     }
     &__header {
-        @apply pb-0 text-xl font-semibold;
+        @apply text-xl font-semibold;
     }
     &__footer:first-child {
         @apply pb-2;
