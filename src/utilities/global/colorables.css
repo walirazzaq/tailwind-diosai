@@ -1,7 +1,7 @@
-@each $name, $short in (base-100, base-200, base-300), (b1, b2, b3) {
+@each $name, $short,$focus in (base-100, base-200, base-300), (b1, b2, b3),(b2,b3,b1) {
     .is-$(name) {
         --cc-bg: var(--$(short));
-        --cc-bg-f: var(--$(short));
+        --cc-bg-f: var(--$(focus));
         --cc-c: var(--bc);
     }
 }
@@ -30,7 +30,7 @@
     }
 } */
 
-@each $name, $short in (neutral, neutral-1, neutral-2, neutral-3, neutral-4, neutral-5), (n,n1,n2,n3,n4,n5) {
+@each $name, $short in (neutral), (n) {
     .is-$(name) {
         --cc-bg: var(--$(short),var(--n));
         --cc-bg-f: var(--$(short)f, var(--nf));
@@ -97,17 +97,3 @@
     --cc-bg-f:var(--cc-bg-f-empty,/*!*/ /*!*/);
     --cc-c:var(--cc-c-empty,/*!*/ /*!*/);
 }
-/* @each $opacity in (1, 2, 3,4) {
-    .tintness-$(opacity)0 {
-        --tw-bg-opacity: 0.$(opacity);
-        --cc-c: var(--cc-bg);
-        backdrop-filter:brightness(var(--tint-lighten,500)) blur(500px);
-    }
-}
-
-@each $opacity in (5, 6, 7, 8, 9) {
-    .tintness-$(opacity)0 {
-        --tw-bg-opacity: 0.$(opacity);
-        backdrop-filter:brightness(var(--tint-lighten,500)) blur(500px);
-    }
-} */

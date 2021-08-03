@@ -1,27 +1,26 @@
-.listicles {
+.list {
     @apply flex flex-col;
-}
-
-.listicle {
-    @apply flex items-center;
-    &__content {
-        @apply flex flex-col items-start flex-grow;
-        & * {
-            width: 100%;
+    &__item {
+        @apply flex items-center transition duration-200;
+        &__content {
+            @apply flex flex-col items-start flex-grow;
+            & * {
+                width: 100%;
+            }
         }
-    }
-    &__support, &__title, &__subtitle {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-    &__support, &__title {
-        -webkit-line-clamp: 1;
-    }
-    &__subtitle {
-        -webkit-line-clamp: 2;
-    }
-    &__prepend,&__append{
-        @apply inline-flex;
+        &__support, &__title, &__subtitle {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        &__support, &__title {
+            -webkit-line-clamp: 1;
+        }
+        &__subtitle {
+            -webkit-line-clamp: 2;
+        }
+        &__prepend, &__append {
+            @apply inline-flex;
+        }
     }
 }

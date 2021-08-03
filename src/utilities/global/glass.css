@@ -1,7 +1,7 @@
 .glass{
   &,
   &:hover,
-  &.btn-active {
+  &.btn--active {
       /* --cc-bg:var(--b1); */
       /* --cc-bg-f:var(--b2); */
       /* --cc-c:var(--bc); */

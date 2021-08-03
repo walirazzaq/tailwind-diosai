@@ -68,39 +68,6 @@ const dark = {
         content: colors.white
     },
     /**
-     * accent
-     */
-    // accent: {
-    //     default: colors.teal[500],
-    //     focus: colors.teal[600],
-    //     content: colors.white
-    // },
-    // 'accent-5': {
-    //     default: colors.teal[50],
-    //     focus: colors.teal[100],
-    //     content: colors.teal[900]
-    // },
-    // 'accent-4': {
-    //     default: colors.teal[200],
-    //     focus: colors.teal[300],
-    //     content: colors.teal[900]
-    // },
-    // 'accent-3': {
-    //     default: colors.teal[400],
-    //     focus: colors.teal[600],
-    //     content: colors.white
-    // },
-    // 'accent-2': {
-    //     default: colors.teal[700],
-    //     focus: colors.teal[800],
-    //     content: colors.white
-    // },
-    // 'accent-1': {
-    //     default: colors.teal[900],
-    //     focus: colors.teal[900],
-    //     content: colors.white
-    // },
-    /**
      * Neutral & Base
      */
     "neutral": "#2a2e37",

@@ -7,7 +7,7 @@
         }
     }
     &__item {
-        @apply flex items-stretch transition duration-200 ease-in-out cursor-pointer;
+        @apply flex items-center transition duration-200 ease-in-out cursor-pointer;
         &:focus {
             @apply outline-none;
         }

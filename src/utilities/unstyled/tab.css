@@ -1,36 +1,36 @@
 .tab {
-    &-md {
+    &--md {
         @apply h-8 text-sm leading-loose;
         --tab-padding: 1rem;
     }
-    &-lg {
+    &--lg {
         @apply h-12 text-lg leading-loose;
         --tab-padding: 1.25rem;
     }
-    &-sm {
+    &--sm {
         @apply h-6 text-sm leading-3;
         --tab-padding: .75rem;
     }
-    &-xs {
+    &--xs {
         @apply h-5 text-xs leading-3;
         --tab-padding: .5rem;
     }
 }
 
 .tabs {
-    :where(&-md) .tab {
+    :where(&--md) .tab {
         @apply h-8 text-sm leading-loose;
         --tab-padding: 1rem;
     }
-    :where(&-lg) .tab {
+    :where(&--lg) .tab {
         @apply h-12 text-lg leading-loose;
         --tab-padding: 1.25rem;
     }
-    :where(&-sm) .tab {
+    :where(&--sm) .tab {
         @apply h-6 text-sm leading-3;
         --tab-padding: .75rem;
     }
-    :where(&-xs) .tab {
+    :where(&--xs) .tab {
         @apply h-5 text-xs leading-3;
         --tab-padding: .5rem;
     }

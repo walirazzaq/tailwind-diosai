@@ -17,3 +17,17 @@
     border-radius: 9999px;
     @apply colorize;
 }
+:where(.indicator__item.indicator--dot){
+    height: 1em;
+    width: 1em;
+    aspect-ratio: 1;
+    border: 0.2em solid;
+}
+:where(.indicator__item.indicator--dot[class*='w-']){
+    height: auto;
+    width: 1em;
+}
+:where(.indicator__item.indicator--dot[class*='h-']){
+    height: 1em;
+    width: auto;
+}

@@ -11,7 +11,7 @@
       content: counter(step);
       counter-increment: step;
       z-index: 1;
-      @apply relative grid block w-8 h-8 col-start-1 row-start-1 rounded-full bg-base-300 text-base-content place-self-center place-items-center;
+      @apply relative grid w-8 h-8 col-start-1 row-start-1 rounded-full bg-base-300 text-base-content place-self-center place-items-center;
     }
     &:first-child:before{
       content: none;

@@ -2,7 +2,12 @@
 html{
   -webkit-tap-highlight-color: transparent;
 }
-
+:where([disabled],[class*="--disabled"]){
+    opacity: 0.3;
+    pointer-events: none;
+    user-select: none;
+    cursor: not-allowed;
+}
 @keyframes spin {
     from {
         transform: rotate(0deg);

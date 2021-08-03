@@ -1,1 +1,0 @@
-.avatar.offline:before,.avatar.online:before{content:"";position:absolute;display:block;border-radius:9999px;width:15%;aspect-ratio:1;top:5%;right:5%;box-shadow:0 0 0 2px hsl(var(--b1))}.avatar.online:before{--tw-bg-opacity:1;background-color:hsla(var(--su)/var(--tw-bg-opacity))}.avatar.offline:before{--tw-bg-opacity:1;background-color:hsla(var(--b3)/var(--tw-bg-opacity))}
