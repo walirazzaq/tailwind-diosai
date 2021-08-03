@@ -30,6 +30,9 @@
         &>figure img {
             @apply object-cover h-full;
         }
+        &>figure {
+            height: inherit;
+        }
     }
     &.card--image-full > &__content {
         @apply relative justify-end;

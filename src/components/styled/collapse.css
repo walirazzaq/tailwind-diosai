@@ -37,7 +37,7 @@
     cursor: unset;
 }
 
-.collapse__title, .collapse>input[type=checkbox] {
+.collapse__title {
     @apply p-4;
     transition: background-color .2s ease-in-out;
 }
