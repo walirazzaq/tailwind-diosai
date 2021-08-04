@@ -4,7 +4,7 @@
     @apply border-4 rounded-full border-base-100;
   }
 }
-.avatar{
+:where(.avatar){
     --tw-bg-opacity:1;
     --tw-text-opacity:1;
     --cc-bg:var(--b3);
@@ -12,5 +12,12 @@
   @apply colorize;
   border-radius: var(--rounded-avatar,9999px);
   width:var(--avatar-size,2.5rem);
+  height:var(--avatar-size,2.5rem);
   aspect-ratio:1;
+}
+:where(.avatar[class*='w-']){
+    height: auto;
+}
+:where(.avatar[class*='h-']){
+    width: auto;
 }

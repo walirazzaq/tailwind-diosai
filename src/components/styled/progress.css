@@ -18,10 +18,9 @@
 .circular-progress {
     --tw-border-opacity: 1;
     --cc-bg:var(--bc);
-    --size: 3.5rem;
     --progress-value: 0%;
-    width: var(--size);
-    height: var(--size);
+    width: var(--prog-w,3.5rem);
+    height: var(--prog-h,3.5rem);
     aspect-ratio: 1;
     display: inline-flex;
     align-items: center;
@@ -30,6 +29,12 @@
     border-radius: 50%;
     transition: --progress-value 0.5s;
     background: conic-gradient(hsla(var(--cc-bg) / var(--tw-border-opacity,1)) var(--progress-value,0%), 0,hsla(var(--cc-bg) / 0.2) 100%);
+    :where(&[class*='w-']){
+        --prog-h:auto;
+    }
+    :where(&[class*='h-']){
+        --prog-w:auto;
+    }
 
 },
 .circular-progress__content {
