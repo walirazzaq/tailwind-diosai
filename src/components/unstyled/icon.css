@@ -2,7 +2,7 @@
     --size:1.35em;
     fill: currentColor;
     color: currentColor;
-    stroke: currentColor;
+    /* stroke: currentColor; */
     align-tems: center;
     justify-content: center;
     vertical-align: middle;

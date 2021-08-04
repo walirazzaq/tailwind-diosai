@@ -1,6 +1,8 @@
 .textarea {
     --rounded-input: var(--rounded-btn);
-    --input-b-c:var(--cc-bg,var(--bc));
+    --tw-border-opacity: 1;
+    --cc-bg: var(--bc);
+    --input-b-c: var(--cc-bg);
     border-color: hsla(var(--input-b-c) / var(--tw-border-opacity));
     border-radius: var(--rounded-input);
     @apply border border-opacity-100 bg-base-100;
