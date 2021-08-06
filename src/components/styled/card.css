@@ -1,7 +1,6 @@
 .card {
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
-    --tw-border-opacity: 1;
     --cc-bg: var(--b1);
     --cc-bg-f: var(--b1);
     --cc-c: var(--bc);
@@ -13,6 +12,7 @@
     }
     &.card--bordered {
         @apply border;
+        --tw-border-opacity: 0.1;
         border-color: hsla(var(--cc-c) / var(--tw-border-opacity));
     }
     &.card--compact {
@@ -60,4 +60,14 @@
         --tw-bg-opacity: 0.75;
         isolation: isolate;
     }
+}
+:where(.card.card--bordered) .card__header{
+    @apply border-b;
+    --tw-border-opacity: 0.1;
+    border-color: hsla(var(--cc-c) / var(--tw-border-opacity));
+}
+:where(.card.card--bordered) .card__footer{
+    @apply border-t;
+    --tw-border-opacity: 0.1;
+    border-color: hsla(var(--cc-c) / var(--tw-border-opacity));
 }

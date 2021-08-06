@@ -26,7 +26,7 @@
         }
     }
     &--disabled, &[disabled],&:disabled {
-        @apply cursor-not-allowed bg-base-200 border-base-200 text-opacity-20;
+        @apply cursor-not-allowed bg-base-200 text-opacity-20;
         &:placeholder{
             --tw-placeholder-opacity:0.2;
             color:hsla(var(--bc) / var(--tw-placeholder-opacity));

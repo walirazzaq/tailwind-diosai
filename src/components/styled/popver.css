@@ -1,9 +1,14 @@
 .popover {
-    @apply shadow-lg rounded-box;
+    @apply shadow-lg;
+    border-radius: var(--rounded-pop, var(--rounded-box, 1rem));
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
     --cc-bg: var(--b1);
     --cc-c: var(--bc);
     background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity));
     color: hsla(var(--cc-c) / var(--tw-text-opacity));
+}
+
+:where(.form-control.has-popover) {
+    --rounded-pop: 0.25rem;
 }

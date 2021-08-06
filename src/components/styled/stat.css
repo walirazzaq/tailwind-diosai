@@ -11,12 +11,16 @@
   background-color: hsla(var(--cc-bg) / var(--tw-bg-opacity));
   &__title{
     @apply opacity-75;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
   }
   &__value{
-    @apply text-4xl font-extrabold;
+    font-size: 2.5em;
+    line-height: 1.25em;
+    font-weight: 400;
   }
   &__description{
-    @apply text-sm opacity-75;
+    font-size: 0.85em;
   }
   &__actions{
     @apply mt-4;

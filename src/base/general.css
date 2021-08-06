@@ -2,7 +2,7 @@
 html{
   -webkit-tap-highlight-color: transparent;
 }
-:where([disabled],[class*="--disabled"]){
+:where([disabled]:not(.btn):not(.input):not(.textarea),[class*="--disabled"]:not(.btn):not(.input):not(.textarea)){
     opacity: 0.3;
     pointer-events: none;
     user-select: none;
