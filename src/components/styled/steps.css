@@ -3,7 +3,7 @@
     grid-template-rows: 40px 1fr;
     min-width: 4rem;
     &:before {
-      @apply top-0 w-full h-2 col-start-1 row-start-1 bg-base-300 text-base-content;
+      @apply top-0 w-full h-2 col-start-1 row-start-1 bg-base-3 text-base-content;
       content: '';
       margin-left: -100%;
     }
@@ -11,7 +11,7 @@
       content: counter(step);
       counter-increment: step;
       z-index: 1;
-      @apply relative grid w-8 h-8 col-start-1 row-start-1 rounded-full bg-base-300 text-base-content place-self-center place-items-center;
+      @apply relative grid w-8 h-8 col-start-1 row-start-1 rounded-full bg-base-3 text-base-content place-self-center place-items-center;
     }
     &:first-child:before{
       content: none;
@@ -40,24 +40,24 @@
     @apply bg-info;
   }
   .step-info:after{
-    @apply bg-info text-base-100;
+    @apply bg-info text-base-1;
   }
   .step-success + .step-success:before{
     @apply bg-success;
   }
   .step-success:after{
-    @apply bg-success text-base-100;
+    @apply bg-success text-base-1;
   }
   .step-warning + .step-warning:before{
     @apply bg-warning;
   }
   .step-warning:after{
-    @apply bg-warning text-base-100;
+    @apply bg-warning text-base-1;
   }
   .step-error + .step-error:before{
     @apply bg-error;
   }
   .step-error:after{
-    @apply bg-error text-base-100;
+    @apply bg-error text-base-1;
   }
 } */

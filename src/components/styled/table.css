@@ -23,7 +23,7 @@
 }
 
 :where(.table.table--compact) {
-    @apply text-sm;
+    font-size: 0.8rem;
     padding: 0.5em;
 }
 
@@ -32,19 +32,23 @@
 }
 
 :where(.table.table--divide:not(.table--strips)) :where(tr:not(:last-child)) {
-    @apply border-b border-base-200;
+    @apply border-b border-base-2;
 }
 
 :where(.table.table--divide:not(.table--strips)) :where(thead) :where(tr) {
-    @apply border-b border-base-300;
+    @apply border-b border-base-3;
 }
 
-:where(.table) :where(thead, tfoot) tr {
-    @apply font-bold uppercase;
+:where(.table) :where(thead, tfoot) tr th {
+    @apply font-medium capitalize;
+    font-size: 0.8rem;
+}
+:where(.table.table--compact) :where(thead, tfoot) tr th {
+    font-size: 0.7rem;
 }
 
 :where(.table.table--strips) :where(thead, tfoot) tr {
-    @apply bg-base-300;
+    @apply bg-base-3;
 }
 
 :where(.table) :where(thead, tfoot) th, td {

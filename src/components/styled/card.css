@@ -17,18 +17,21 @@
     }
     &.card--compact {
         --padding-card: 1rem;
-        .card__body {
+        .card__content {
             @apply text-sm;
         }
         .card__header {
-            @apply mb-1;
+            @apply pb-1 text-base;
         }
     }
-    &__body, &__header, &__footer {
-        padding: calc(var(--padding-card, 2rem) / 3) var(--padding-card, 2rem);
+    &__header,&__body,&__footer{
+        padding-inline: var(--padding-card, 1.5rem);
+    }
+    &__content {
+        padding-block: var(--padding-card, 1.5rem);
     }
     &__header {
-        @apply text-xl font-semibold;
+        @apply pb-3 text-xl font-semibold;
     }
     &__footer:first-child {
         @apply pb-2;
@@ -61,7 +64,7 @@
         isolation: isolate;
     }
 }
-:where(.card.card--bordered) .card__header{
+/* :where(.card.card--bordered) .card__header{
     @apply border-b;
     --tw-border-opacity: 0.1;
     border-color: hsla(var(--cc-c) / var(--tw-border-opacity));
@@ -70,4 +73,4 @@
     @apply border-t;
     --tw-border-opacity: 0.1;
     border-color: hsla(var(--cc-c) / var(--tw-border-opacity));
-}
+} */

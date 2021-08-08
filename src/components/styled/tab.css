@@ -43,7 +43,7 @@
     padding-right: var(--tab-padding, 1rem);
     padding-top: var(--tab-border, 1px);
     &.tab--active {
-        @apply bg-base-100;
+        @apply bg-base-1;
         border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0 var(--tab-border, 1px);
         border-left-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
         border-right-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
@@ -97,7 +97,7 @@
 }
 
 .tabs--boxed {
-    @apply p-1 bg-base-200 rounded-btn;
+    @apply p-1 bg-base-2 rounded-btn;
     .tab--active {
         border-radius:inherit;
         background-color:hsla(var(--cc-bg) / var(--tw-bg-opacity));

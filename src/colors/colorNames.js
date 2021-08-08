@@ -41,9 +41,9 @@ module.exports = {
     "neutral-focus": "--nf",
     "neutral-content": "--nc",
 
-    "base-100": "--b1",
-    "base-200": "--b2",
-    "base-300": "--b3",
+    "base-1": "--b1",
+    "base-2": "--b2",
+    "base-3": "--b3",
     "base-content": "--bc",
 
     "info": "--in",

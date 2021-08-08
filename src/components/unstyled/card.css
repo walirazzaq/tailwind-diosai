@@ -7,15 +7,17 @@
         @apply flex flex-col h-full;
     }
     &__body {
-        @apply flex flex-col overflow-x-hidden overflow-y-auto;
+        @apply flex flex-col;
     }
     & figure, & figure>* {
         @apply w-full;
     }
     &__footer {
-        @apply flex flex-wrap items-start -mx-1;
-        &>* {
-            @apply m-1
+        @apply flex flex-wrap items-start;
+    }
+    &.card--scroll{
+        .card__body{
+            @apply overflow-auto;
         }
     }
     &.card--image-full {

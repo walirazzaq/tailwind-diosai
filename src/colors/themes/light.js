@@ -73,9 +73,9 @@ const light = {
     "neutral": "#3d4451",
     "neutral-focus": "#2a2e37",
     "neutral-content": "#ffffff",
-    "base-100": "#ffffff",
-    "base-200": "#f9fafb",
-    "base-300": "#d1d5db",
+    "base-1": "#ffffff",
+    "base-2": "#F8FAFC",
+    "base-3": "#F1F5F9",
     "base-content": "#1f2937",
     /**
      * info
@@ -218,7 +218,7 @@ const light = {
     "--rounded-badge": "0.2rem",
     "--animation-btn": "0.25s",
     "--animation-input": ".4s",
-    "--padding-card": "2rem",
+    "--padding-card": "1.5rem",
     "--btn-text-case": "uppercase",
     "--btn-focus-scale": "0.95",
     "--navbar-padding": ".5rem",
@@ -234,6 +234,5 @@ const light = {
     "--glass-reflex-opacity": "10%",
     "--glass-blur": "40px",
     "--glass-text-shadow-opacity": "5%",
-    '--tint-lighten': '500'
 }
 module.exports = flattenColors(light)

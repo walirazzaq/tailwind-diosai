@@ -1,7 +1,7 @@
 .menu {
-    --cc-bg: var(--bc);
-    --cc-bg-f: var(--bc);
-    --cc-c: var(--b1);
+    --cc-bg: var(--p);
+    --cc-bg-f: var(--pf);
+    --cc-c: var(--pc);
     :where(&&--horizontal&--bordered) :where(&__item) {
         @apply border-b-4 border-l-0;
     }

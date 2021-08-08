@@ -1,6 +1,6 @@
 .btn {
     @apply inline-flex flex-wrap items-center justify-center flex-shrink-0 text-center transition duration-200 ease-in-out border-transparent cursor-pointer select-none rounded-btn;
-    font-size: 1rem;
+    font-size: var(--btn-font-size,1rem);
     line-height: 1.25em;
     padding: .35em 0.75em;
     &__prepend, &__append {
@@ -43,3 +43,6 @@
         content: attr(data-title);
     }
 }
+/* :where(.btn) + :where(.btn) {
+    margin-left: 0.5rem;
+} */

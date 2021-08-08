@@ -1,7 +1,7 @@
 .avatar-group{
   @apply flex items-center;
   :where(&) .avatar{
-    @apply border-4 rounded-full border-base-100;
+    @apply border-4 rounded-full border-base-1;
   }
 }
 :where(.avatar){

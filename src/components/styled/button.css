@@ -1,9 +1,8 @@
 .btn {
-    @apply font-semibold;
+    @apply font-medium;
     border-width: var(--border-btn, 0.15em);
     animation: button-pop var(--animation-btn, 0.25s) ease-out;
     text-transform: var(--btn-text-case, uppercase);
-    letter-spacing: 0.1em;
     &:active:hover, &:active:focus {
         animation: none;
     }
@@ -15,9 +14,9 @@
         --tw-bg-opacity: 1;
         --tw-text-opacity: 1;
         --tw-border-opacity: 1;
-        --cc-bg: var(--bc);
-        --cc-c: var(--b1);
-        --cc-bg-f: var(--bc);
+        --cc-bg: var(--p);
+        --cc-c: var(--pc);
+        --cc-bg-f: var(--pf);
         border-color: hsla(var(--cc-bg) / var(--tw-border-opacity));
         @apply colorize;
         &:hover, &--active {

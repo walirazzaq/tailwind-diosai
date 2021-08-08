@@ -10,4 +10,28 @@
       @apply h-full;
     }
   }
+  &&--start:not(&--vertical){
+      &:after{
+          width: auto;
+          margin-left:0;
+      }
+  }
+  &&--end:not(&--vertical){
+      &:before{
+          width: auto;
+          margin-right:0;
+      }
+  }
+  &&--start&--vertical{
+      &:after{
+          height: auto;
+          margin-top:0;
+      }
+  }
+  &&--end&--vertical{
+      &:before{
+          height: auto;
+          margin-bottom:0;
+      }
+  }
 }

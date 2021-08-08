@@ -1,4 +1,4 @@
-@each $name, $short,$focus in (base-100, base-200, base-300), (b1, b2, b3),(b2,b3,b1) {
+@each $name, $short,$focus in (base-1, base-2, base-3), (b1, b2, b3),(b2,b3,b1) {
     .is-$(name) {
         --cc-bg: var(--$(short));
         --cc-bg-f: var(--$(focus));
