@@ -20,7 +20,7 @@
         @apply pointer-events-none;
     }
     &--icon {
-        padding: 0.35em;
+        padding: 0.45em;
     }
     /* shapes */
     &--square {

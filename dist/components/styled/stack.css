@@ -1,0 +1,1 @@
+.stack{place-items:center;align-items:flex-end}.stack>*{width:100%}.stack>*{opacity:.6}.stack>:nth-child(2){opacity:.8}.stack>:first-child{opacity:1}
