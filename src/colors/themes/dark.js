@@ -70,9 +70,9 @@ const dark = {
     /**
      * Neutral & Base
      */
-    "neutral": "#2a2e37",
-    "neutral-focus": "#16181d",
-    "neutral-content": "#ffffff",
+    "neutral": "#334155",//"#2a2e37",
+    "neutral-focus": "#0F172A",//"#16181d",
+    "neutral-content": "#F8FAFC",//"#ffffff",
     "base-1": "#3d4451",
     "base-2": "#2a2e37",
     "base-3": "#16181d",

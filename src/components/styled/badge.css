@@ -1,33 +1,39 @@
 .badge {
-    --cc-bg: var(--b3);
-    --cc-c: var(--bc);
+    --cc-bg: var(--n);
+    --cc-bg-f: var(--nf);
+    --cc-c: var(--nc);
     min-width: 1.6em;
-    font-size: var(--badge-f-size,0.65em);
+    font-size: var(--badge-f-size, 0.65em);
     line-height: initial;
     @apply px-1 py-px colorize rounded-badge;
 }
 
 :where(.indicator) .indicator__item {
-
-    --cc-bg: var(--b3);
-    --cc-c: var(--bc);
-    font-size: var(--badge-f-size,0.65em);
+    --cc-bg: var(--n);
+    --cc-bg-f: var(--nf);
+    --cc-c: var(--nc);
+    font-size: var(--badge-f-size, 0.65em);
     line-height: initial;
     padding: 0.15em;
     border-radius: 9999px;
     @apply colorize;
 }
-:where(.indicator__item.indicator--dot){
+
+:where(.indicator__item.indicator--dot) {
     height: 1em;
     width: 1em;
     aspect-ratio: 1;
     border: 0.2em solid;
+    --tw-border-opacity: 1;
+    border-color: hsla(var(--cc-bg-f)/var(--tw-border-opacity, 1));
 }
-:where(.indicator__item.indicator--dot[class*='w-']){
+
+:where(.indicator__item.indicator--dot[class*='w-']) {
     height: auto;
     width: 1em;
 }
-:where(.indicator__item.indicator--dot[class*='h-']){
+
+:where(.indicator__item.indicator--dot[class*='h-']) {
     height: 1em;
     width: auto;
 }

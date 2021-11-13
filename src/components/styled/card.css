@@ -33,12 +33,12 @@
     &__header {
         @apply pb-3 text-xl font-semibold;
     }
-    &__footer:first-child {
+    /* &__footer:first-child {
         @apply pb-2;
     }
     &__footer:last-child {
         @apply pt-4;
-    }
+    } */
     &--image-full {
         &:before {
             @apply rounded-box;
@@ -63,6 +63,12 @@
         --tw-bg-opacity: 0.75;
         isolation: isolate;
     }
+}
+:where(.card__footer:first-child) {
+    @apply pb-2;
+}
+:where(.card__footer:last-child) {
+    @apply pt-4;
 }
 /* :where(.card.card--bordered) .card__header{
     @apply border-b;

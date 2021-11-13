@@ -70,9 +70,9 @@ const light = {
     /**
      * Neutral & Base
      */
-    "neutral": "#3d4451",
-    "neutral-focus": "#2a2e37",
-    "neutral-content": "#ffffff",
+    "neutral": "#CBD5E1",//"#3d4451",
+    "neutral-focus": "#94A3B8",//"#2a2e37",
+    "neutral-content": "#1E293B",//"#ffffff",
     "base-1": "#ffffff",
     "base-2": "#F8FAFC",
     "base-3": "#F1F5F9",

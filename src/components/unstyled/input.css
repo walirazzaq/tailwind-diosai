@@ -16,6 +16,7 @@
 }
 
 :where(.input) input {
+    width: inherit;
     &:focus {
         outline: none;
     }
