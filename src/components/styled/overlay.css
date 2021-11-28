@@ -1,8 +1,14 @@
-.overlay{
-    --tw-bg-opacity:0.85;
-        background-color:hsla(var(--b3) / var(--tw-bg-opacity));
-        backdrop-filter: blur(2px);
-    &__content{
+.overlay {
+    --tw-bg-opacity: 0.85;
+    background-color: hsla(var(--b3) / var(--tw-bg-opacity));
+    backdrop-filter: blur(2px);
+
+    &__content {
         @apply shadow-lg rounded-box;
     }
+}
+
+:where(.overlay) .overlay {
+    background-color: transparent;
+    backdrop-filter: unset;
 }

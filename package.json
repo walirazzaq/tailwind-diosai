@@ -4,13 +4,13 @@
   "description": "Modified DaisyUI - Tailwind CSS Components",
   "author": "Wali Razzaq & Pouya Saadeghi",
   "license": "MIT",
-  "homepage": "https://github.com/binaryweavers/tailwind-diosai",
+  "homepage": "https://github.com/walirazzaq/tailwind-diosai",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/binaryweavers/tailwind-diosai.git"
+    "url": "git+https://github.com/walirazzaq/tailwind-diosai.git"
   },
   "bugs": {
-    "url": "https://github.com/binaryweavers/tailwind-diosai/issues"
+    "url": "https://github.com/walirazzaq/tailwind-diosai/issues"
   },
   "keywords": [
     "design-system",
