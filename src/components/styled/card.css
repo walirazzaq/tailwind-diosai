@@ -68,7 +68,7 @@
     @apply pb-2;
 }
 :where(.card__footer:last-child) {
-    @apply pt-4;
+    @apply mt-8;
 }
 /* :where(.card.card--bordered) .card__header{
     @apply border-b;
